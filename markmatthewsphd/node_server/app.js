@@ -16,7 +16,7 @@ var server = http.createServer(function (request, response) {
     }
     else if (request.url === '/style.css') {
         fs.readFile('style.css', 'utf8', function (errors, contents) {
-            if (errors) console.log(errors)
+            if (errors) console.log(errors); // added new from stack overflow snippet
             response.writeHead(200, {'Content-Type': 'text/css'});
             response.write(contents);
             response.end();

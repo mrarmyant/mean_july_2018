@@ -7,12 +7,3 @@
 h1 {
     color: darkmagenta;
 }
-a {
-    color: cadetblue;
-    text-decoration: none;
-
-}
-a:visited{
-    color: aqua;
-}
-
