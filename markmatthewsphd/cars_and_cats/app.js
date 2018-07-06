@@ -142,7 +142,7 @@ var server = http.createServer(function (request, response) {
     }
     // request didn't match anything:
     else {
-        response.writeHead(418);
+        response.writeHead(418); // LOL Short and Stout
         response.end('File not found!!!');
     }
 });
