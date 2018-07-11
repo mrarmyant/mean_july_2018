@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+        <title>Hunting Github</title>
+    </head>
+    <body>
+        <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                data = $.get("https://api.github.com/users/RamonaFlorina", displayName)
+
+                function displayName(data) {
+                    $("div").append("<strong>Your name: </strong>", data.name, "<strong> Your UserName: </strong>", data.login);
+                }
+            });
+        });
+        </script>
+        <div class="container">
+            <p class="col-2">
+                <button type="button" class="btn btn-outline-dark bt-lg">GitHub</button>
+            </p>
+        </div>
+    </body>
+</html>

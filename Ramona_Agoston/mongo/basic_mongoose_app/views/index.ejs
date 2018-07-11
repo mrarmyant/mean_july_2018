@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h2>Here are all the users:</h2>
+        <% for (var x in users) { %>
+            <p><strong>Name: </strong><%= users[x].name %></p>
+            <p><strong>Age: </strong><%= users[x].age %></p>
+            <hr>
+        <% } %>
+        <form action='/users' method='post'>
+            <p>Name: <input type='text' name='name'></p>
+            <p>Age: <input type='number' name='age'></p>
+            <input type='submit' value='create user'>
+        </form>
+    </body>
+</html>
