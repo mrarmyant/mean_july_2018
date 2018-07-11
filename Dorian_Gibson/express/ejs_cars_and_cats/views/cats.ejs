@@ -38,11 +38,13 @@
   </header>
 
   <div class='container mt-5'>
+    <div class='row'>
       <% for(var x in files) { %>
-        <img class='mx-auto mt-3' src="/<%= files[x].name %>" alt="AE86" width=auto height=100%>
-        <hr>
+        <img class='mt-3' src="/<%= files[x].name %>" alt="AE86" width='auto' height='100%'>
+        
       <% } %>
     </div>
+  </div>
 
 </body>
 
