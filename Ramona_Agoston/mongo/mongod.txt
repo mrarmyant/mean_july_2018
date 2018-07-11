@@ -1,0 +1,5 @@
+Startup the mongod service:
+> "C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe" --dbpath="c:\data\db"
+
+Connect to the mongod service to run mongo commands:
+> "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
