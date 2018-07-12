@@ -25,10 +25,10 @@
             <li class="nav-item">
               <a class="nav-link" href="/cars">Cars</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="/cats">Cats</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="/cars/new">New</a>
             </li>
           </ul>
@@ -37,15 +37,29 @@
     </nav>
   </header>
 
-  <div class='container mt-5'>
-    <div class='row'>
-      <% for(var x in files) { %>
-        <img class='mt-3' src="/<%= files[x].name %>" alt="AE86" width='auto' height='100%'>
-        
-      <% } %>
+</body>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <form class="" action="">
+
+        <label>Make of vehicle:</label>
+        <input class="form-control" name="name">
+
+        <label>Model of vehicle:</label>
+        <input class="form-control" name="name">
+
+        <label>Type of vehicle:</label>
+        <select class="form-control" name="lang">
+          <option>Sedan</option>
+          <option>Coupe</option>
+          <option>Wagon</option>
+          <option>Truck</option>
+        </select>
+
+        <button type="button" class="btn btn-outline-dark btn-sm">Submit</button>
+      </form>
     </div>
   </div>
-
-</body>
-
+</div>
 </html>
