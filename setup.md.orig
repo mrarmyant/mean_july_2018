@@ -11,9 +11,16 @@ nodemon server.js  # Start project server.
 mkdir express_project_name # Create directory for new project.
 npm init -y   # Set up empty package.json file.
 ```
+<<<<<<< HEAD
 
 Install necessary packages using npm
-
+=======
+install necessary packages using npm:
+  yourcommandline> npm install express --save
+  yourcommandline> npm install ejs --save
+  yourcommandline> npm install body-parser --save
+  yourcommandline> npm install mongoose --save
+>>>>>>> 6e69acf99292f20b4f2b965de2a405356fa89f31
 
 Set up server section of project:
 ```bash
