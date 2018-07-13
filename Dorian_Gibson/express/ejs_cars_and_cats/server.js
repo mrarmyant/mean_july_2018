@@ -5,7 +5,7 @@ console.log("Let's find out what express is", express);
 var app = express();
 console.log("Let's find out what app is", app);
 // This sets the location where express will look for the ejs views
-app.set('views', __dirname + '/views/'); 
+app.set('views', __dirname + '/views/');
 // Now lets set the view engine itself so that express knows that we are using ejs as opposed to another templating engine like jade
 app.set('view engine', 'ejs');
 // this is the line that tells our server to use the "/static" folder for static content
@@ -15,7 +15,10 @@ app.get("/cars", function (request, response){
     {name:'ae86.jpg'},
     {name:'porsche.jpg'},
     {name:'rsti.jpg'},
-    {name:'rx7.jpg'}
+    {name:'rx7.jpg'},
+    // JOSH: I'm going to add some stuff here
+    {name:'blah blah blah'}
+    {name:'ummmmmmhmmmmmmm'}
   ]
 
   response.render('cars', {files: files_name});
@@ -34,6 +37,9 @@ app.get("/cats", function (request, response){
 app.get("/cars/new", function (request, response){
   response.render('form');
 })
+// JOSH: I'm going to add some stuff here
+console.log('I just added this console log');
+
 app.use(express.static(__dirname + "/static"));
 // two underscores before dirname
 // try printing out __dirname using console.log to see what it is and why we use it
