@@ -1,6 +1,7 @@
+### Create Express project
 ```bash
-mkdir express_project_name # create directory for new project
-npm init -y   # set up empty package.json file
+mkdir express_project_name # Create directory for new project.
+npm init -y   # Set up empty package.json file.
 ```
 install necessary packages using npm
 
@@ -9,7 +10,7 @@ Set up server section of project:
 touch server.js
 ```
 
-Set up Angular (client portion):
+### Set up Angular (client portion):
 ```bash
 ng new angular-app
 cd angluar-app
@@ -22,7 +23,31 @@ app.use(express.static(path.join(__dirname, 'angular-app', 'dist', 'angular-app'
 ```
 
 ```bash
-mongod # start mongoDB daemon
-mongo  # start mongoDB shell
-nodemon server.js  # start project server
+mongod # Start mongoDB daemon.
+mongo  # Start mongoDB shell.
+nodemon server.js  # Start project server.
+```
+
+### Create Angular service
+From Angular app directory:
+```bash
+ng g s name_of_service
+```
+Add to `app/app.module.ts`
+```javascript
+import { Name_of_serviceService } from ./name_of_service.service;
+Name_of_serviceService // providers array.
+HttpClientModule // imports
+```
+
+Add to `name_of_service.service.ts`
+```javascript
+import HttpClient from '@angular/common/http';
+constructor(private _http: HttpClient) {} // Set up private attribute to use HttpClient. Added to Name_of_serviceService class.
+```
+
+Add to `app.component.ts`:
+```javascript
+import { Name_of_serviceService } from './name_of_service.service'
+constructor(private _name_of_serviceService: Name_of_serviceService) {}
 ```
