@@ -28,7 +28,7 @@ mongo  # Start mongoDB shell.
 nodemon server.js  # Start project server.
 ```
 
-### Create Angular service
+### Create Angular Service
 From Angular app directory:
 ```bash
 ng g s name_of_service
@@ -50,4 +50,17 @@ Add to `app.component.ts`:
 ```javascript
 import { Name_of_serviceService } from './name_of_service.service'
 constructor(private _name_of_serviceService: Name_of_serviceService) {}
+```
+### Create, and subscribe to, Angular Observable
+Add this method to `Name_of_serviceService` class in `name_of_service.service.ts`
+```javascript
+getSomeThing() {
+  let someObservable = this._http.get('some_route/'); // Create Observable
+  someObservable.subscribe(data => `functionality here`); // Subscribe to Observable
+}
+```
+
+Now we need to make sure that method is run when the Service is created. We will do this in the Service's constructor in `name_of_service.service.ts`.
+```javascript
+this.getSomeThing();
 ```
