@@ -1,33 +1,37 @@
+## These 4 things should be running when testing:
+```bash
+mongod # Start mongoDB daemon.
+mongo  # Start mongoDB shell.
+ng build --watch
+nodemon server.js  # Start project server.
+```
+----------------------------------------------------
 ### Create Express project
 ```bash
 mkdir express_project_name # Create directory for new project.
 npm init -y   # Set up empty package.json file.
 ```
-install necessary packages using npm
+Install necessary packages using npm
 
 Set up server section of project:
 ```bash
 touch server.js
 ```
 
-### Set up Angular (client portion):
+----------------------------------------------------
+### Set up Angular (client portion) INSIDE OF Express project:
 ```bash
 ng new angular-app
 cd angluar-app
 ng build --watch # LEAVE THIS RUNNING!
 ```
 
-Tell Express where to find static files (this should be in server.js)
+Tell Express where to find static files (this should be in `server.js`)
 ```javascript
 app.use(express.static(path.join(__dirname, 'angular-app', 'dist', 'angular-app')));
 ```
 
-```bash
-mongod # Start mongoDB daemon.
-mongo  # Start mongoDB shell.
-nodemon server.js  # Start project server.
-```
-
+----------------------------------------------------
 ### Create Angular Service
 From Angular app directory:
 ```bash
@@ -64,3 +68,16 @@ Now we need to make sure that method is run when the Service is created. We will
 ```javascript
 this.getSomeThing();
 ```
+----------------------------------------------------
+### Set up server routes, controllers, models
+```bash
+mkdir -p server/config # This will make both directories
+mkdir server/controllers
+mkdir server/models
+mkdir server/config
+touch server/config/mongoose.js # contents can be found in express_angular_template on GitHub. NOTE: YOU WILL NEED TO CONNECT TO THE DATABASE YOU'RE USING!
+touch server/config/routes.js
+```
+- Add schema to server/models.
+- Add controller to server/controllers.
+- Create db and collections in mongoDB.
