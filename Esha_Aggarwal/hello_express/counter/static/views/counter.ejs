@@ -10,10 +10,10 @@
     <body>
         <div class='container'>
             <h1 class='text-center'>Counter</h1>
-            <h3 class='text-center'>{{ count }} times</h3>
+            <h3 class='text-center'> <%= session.counter %> times</h3>
             <div class='justify-content-center row'>
                 <a href='/plus' name='plus' class='btn btn-info'>Add two visits!</a>
-                <a href='/destroy_session' name='clear' class='btn btn-danger'>Reset</a>
+                <a href='/reset' name='clear' class='btn btn-danger'>Reset</a>
             </div>
         </div>
     </body>
