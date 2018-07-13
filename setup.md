@@ -11,6 +11,7 @@ nodemon server.js  # Start project server.
 mkdir express_project_name # Create directory for new project.
 npm init -y   # Set up empty package.json file.
 ```
+
 Install necessary packages using npm
 
 Set up server section of project:
