@@ -3,7 +3,11 @@
 mkdir express_project_name # Create directory for new project.
 npm init -y   # Set up empty package.json file.
 ```
-install necessary packages using npm
+install necessary packages using npm:
+  yourcommandline> npm install express --save
+  yourcommandline> npm install ejs --save
+  yourcommandline> npm install body-parser --save
+  yourcommandline> npm install mongoose --save
 
 Set up server section of project:
 ```bash
