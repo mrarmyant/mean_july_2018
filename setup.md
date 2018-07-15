@@ -41,7 +41,7 @@ ng g s name_of_service
 ```
 Add to `app/app.module.ts`
 ```javascript
-import { Name_of_serviceService } from ./name_of_service.service;
+import { Name_of_serviceService } from './name_of_service.service';
 Name_of_serviceService // providers array.
 HttpClientModule // imports
 ```
