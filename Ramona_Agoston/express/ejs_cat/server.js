@@ -2,12 +2,10 @@ var express = require("express");
 var app = express();
 
 app.get("/cats", function (request, response){
-
     response.render('cats');
 })
 
 app.get("/cat1", function (request, response){
-
     var cats_array = [
         {favfood: "bugs",
         age: 5,
@@ -18,7 +16,6 @@ app.get("/cat1", function (request, response){
 })
 
 app.get("/cat2", function (request, response){
-
     var cats_array = [
         {favfood: "tofu",
         age: 2,
@@ -27,8 +24,8 @@ app.get("/cat2", function (request, response){
     ];
     response.render('details',{cats: cats_array});
 })
-app.get("/cat3", function (request, response){
 
+app.get("/cat3", function (request, response){
     var cats_array = [
         {favfood: "broccoli",
         age: 3,

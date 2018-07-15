@@ -17,8 +17,11 @@ app.post("/users", function (request, response){
     response.render('results',{data:data});
 })
 
+// this is the line that tells our server to use the "/static" folder for static content
 app.use(express.static(__dirname + "/static"));
+// This sets the location where express will look for the ejs views
 app.set('views', __dirname + '/views');
+// Now lets set the view engine itself so that express knows that we are using ejs
 app.set('view engine', 'ejs');
 
 app.listen(8000, function() {
