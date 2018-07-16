@@ -30,14 +30,11 @@ h1 {
   text-align: center;
   color: #06a9e2; }
 
-div.container { padding: 2rem 0rem; justify-content: center; }
-
-
 /*   Form CSS - STARTs   */
 #chatform { padding: 2rem; }
 form {
    color: #06a9e2;
-   border-radius: 2rem;
+   border-radius: 1rem;
    transition: all .5s ease;
    border: 1px solid #343a40;
    box-shadow: 1px 0px 1px 0px; }
@@ -53,10 +50,15 @@ textarea.form-control { color: #06a9e2 !important; }
 
 input.form-control,
 textarea.form-control { color: #0062cc !important; }
+
 .border {
    border: 1px solid #2196F3!important;
-   padding: 2rem;
-   border-radius: 1rem; }
+   background: #363738a3 !important;
+   padding: 1rem 2rem !important;
+   border-radius: 1rem !important; }
+
+.non-border {
+    border: 1px solid transparent!important; }
 
 button.btn {
   color: inherit;
@@ -65,6 +67,7 @@ button.btn {
   justify-content: flex-end;
   background-color: transparent;
   border: .5px solid #06a9e2 !important; }
+
 button.btn:hover {
   cursor: pointer;
   background-color: #06a9e2;

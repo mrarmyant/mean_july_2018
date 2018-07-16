@@ -109,9 +109,9 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res)             => { res.render('Cats', {cats: cats}) });
 app.get('/cats', (req, res)         => { res.render('Cats', {cats: cats}) });
 app.get('/cats/cat:id', (req, res)  => {
-   let cat = cats.filter((cat) => (cat.id === req.params.id));
-   console.log(`\n\n${cat}\n\n`);
-   res.render('Details', { cat: cat });
+   let cat = cats.filter((cat) => (cat.id === parseInt(req.params.id)));
+   console.log(cat[0]);
+   res.render('Details', { cat: cat[0] });
 });
 
 

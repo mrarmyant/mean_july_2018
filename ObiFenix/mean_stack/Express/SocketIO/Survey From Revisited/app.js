@@ -1,22 +1,25 @@
 // Required Modules
 var express = require("express"),
+    app = express(),
     path = require('path'),
     http = require('http').Server(app);
     bodyParser = require('body-parser'),
     expressLayouts = require('express-ejs-layouts');
 
-var app = express();                         // invoke express and stores into a app
 
 // Required Middlewares...
 app.use(expressLayouts);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/static"));
 
+// Setup the view engines
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 // Required Endpoint Routes
-app.get('/', (req, res) => { res.render('Index'); });
+app.get('/', (req, res) => {
+   res.render('Index');
+});
 
 // Clients connection port access config...
 var port = process.env.PORT || 8000;         //holds the arbitrary port for serveer
