@@ -8,6 +8,6 @@ var express    = require('express'),
 app.use(express.static(path.join(__dirname, 'angular-app', 'dist', 'angular-app')));
 app.use(bodyParser.json());
 
-app.listen(8000, function() {
+app.listen(port, function() {
     console.log(`listening on port ${port}`);
 })
